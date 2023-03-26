@@ -109,7 +109,7 @@ func GetDataPembayaran(ket string) (data []Pembayaran) {
 	filter := bson.M{"keterangan": ket}
 	cursor, err := user.Find(context.TODO(), filter)
 	if err != nil {
-		fmt.Println("GetDataPembayaran :", err)
+		fmt.Println("GetDataPembayaran  :", err)
 	}
 	err = cursor.All(context.TODO(), &data)
 	if err != nil {
