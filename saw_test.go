@@ -2,13 +2,10 @@ package gosaw
 
 import (
 	"fmt"
-	"os"
 	"testing"
 
 	"github.com/aiteung/atdb"
 )
-
-var MongoString string = os.Getenv("MONGOSTRING")
 
 var MongoInfo = atdb.DBInfo{
 	DBString: MongoString,
