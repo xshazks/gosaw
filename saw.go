@@ -104,9 +104,9 @@ func GetDataDafpel(ket string) (data []Dafpel) {
 	return
 }
 
-func GetDataPembayaran(ket string) (data []Pembayaran) {
+func GetDataPembayaran(stats string) (data []Pembayaran) {
 	user := MongoConnect("dbmonitor").Collection("pembayaran")
-	filter := bson.M{"keterangan": ket}
+	filter := bson.M{"status": stats}
 	cursor, err := user.Find(context.TODO(), filter)
 	if err != nil {
 		fmt.Println("GetDataPembayaran  :", err)
